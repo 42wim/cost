@@ -1,6 +1,7 @@
 # cost
 
-bitcoin, litecoin, ethereum, altcoin address (pubkey/privkey) generator 
+bitcoin, litecoin, ethereum, altcoin address (pubkey/privkey) generator   
+
 can create bip44 receive addresses based on bip39 mnemonic seed words
 
 :warning: This is just an experiment to learn more about cryptocurrencies.

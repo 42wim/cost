@@ -89,6 +89,14 @@
 			"notests": true
 		},
 		{
+			"importpath": "github.com/diegosz/go-bip39",
+			"repository": "https://github.com/diegosz/go-bip39",
+			"vcs": "git",
+			"revision": "5ed7613c8bc0a4e4a6cb7a782bcaee4c0e1f1cb0",
+			"branch": "master",
+			"notests": true
+		},
+		{
 			"importpath": "github.com/ethereum/go-ethereum/common",
 			"repository": "https://github.com/ethereum/go-ethereum",
 			"vcs": "git",
@@ -173,6 +181,15 @@
 			"vcs": "git",
 			"revision": "c893efa28eb45626cdaa76c9f653b62488858837",
 			"branch": "master",
+			"notests": true
+		},
+		{
+			"importpath": "golang.org/x/crypto/pbkdf2",
+			"repository": "https://go.googlesource.com/crypto",
+			"vcs": "git",
+			"revision": "81e90905daefcd6fd217b62423c0908922eadb30",
+			"branch": "master",
+			"path": "/pbkdf2",
 			"notests": true
 		},
 		{

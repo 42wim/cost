@@ -289,8 +289,18 @@ func main() {
 			// print out our wallet
 			for _, account := range wallet.Accounts {
 				fmt.Fprintln(tw, account.Coin)
-				fmt.Fprintln(tw, "account extended key:", account.Key.String())
-				fmt.Fprintln(tw, "external (m/44'/type'/0'/0) extended key:", account.External.String())
+				fmt.Fprintln(tw, "account extended prv key:", account.Key.String())
+				pubkey, err := account.Key.Neuter()
+				if err != nil {
+					log.Fatalln("Failed to create pub key:", err)
+				}
+				fmt.Fprintln(tw, "account extended pub key:", pubkey.String())
+				fmt.Fprintln(tw, "external (m/44'/type'/0'/0) extended prv key:", account.External.String())
+				pubkey, err = account.External.Neuter()
+				if err != nil {
+					log.Fatalln("Failed to create pub key:", err)
+				}
+				fmt.Fprintln(tw, "external (m/44'/type'/0'/0) extended pub key:", pubkey.String())
 				for i, address := range account.Addresses {
 					fmt.Fprintf(tw, "%d\t%s\t%s\t%s\n", i, address.Address, address.Privkey, address.Pubkey)
 				}

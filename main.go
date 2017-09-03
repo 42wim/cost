@@ -283,6 +283,7 @@ func main() {
 			wallet.Accounts = append(wallet.Accounts, bip44("Bitcoin", addrcount, pkb))
 			wallet.Accounts = append(wallet.Accounts, bip44("Litecoin", addrcount, pkb))
 			wallet.Accounts = append(wallet.Accounts, bip44("Ether", addrcount, pkb))
+			wallet.Accounts = append(wallet.Accounts, bip44("Dash", addrcount, pkb))
 
 			fmt.Println()
 			// print out our wallet

@@ -23,7 +23,7 @@ func genCoin(pk *btcec.PrivateKey, PubKeyHashAddrID, PrivateKeyID byte, name str
 	net.PubKeyHashAddrID = PubKeyHashAddrID
 	net.PrivateKeyID = PrivateKeyID
 	wif, _ := btcutil.NewWIF(pk, net, true)
-	addr, _ := btcutil.NewAddressPubKey(wif.PrivKey.PubKey().SerializeUncompressed(), net)
+	addr, _ := btcutil.NewAddressPubKey(wif.PrivKey.PubKey().SerializeCompressed(), net)
 	fmt.Fprintf(tw, "%s\t%s\t%s\n", name, addr.EncodeAddress(), wif.String())
 }
 

@@ -8,17 +8,15 @@ can create bip44 receive addresses based on bip39 mnemonic seed words
 Do not use in production :)
 
 ## Building
-Go 1.7+ is required. Make sure you have [Go](https://golang.org/doc/install) properly installed, including setting up your [GOPATH] (https://golang.org/doc/code.html#GOPATH)
+Go 1.12+ is required.
 
-```
-cd $GOPATH
 go get -tags nocgo github.com/42wim/cost
 ```
 
-You should now have cost binary in the bin directory:
+You should now have cost binary in the ~/go/bin directory:
 
 ```
-$ ls bin/
+$ ls ~/go/bin/
 cost
 ```
 
@@ -28,7 +26,7 @@ cost
 
 Use -genpk to generate a private key. Use this output as input for -pk
 this will create a coin address for each altcoin with the compressed private key
-eg ./cost -usepk "$(./cost -genpk)"
+eg ./cost -pk "$(./cost -genpk)"
 
 Use -genseedwords to create 24 bip39 seed words. Use this as input for -seedwords
 This will create bip44 Hierarchy with 20 receive addresses for bitcoin/litecoin and ether

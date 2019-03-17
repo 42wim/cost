@@ -182,7 +182,7 @@ func main() {
 		fmt.Println()
 		fmt.Println("Use -genpk to generate a private key. Use this output as input for -pk")
 		fmt.Println("this will create a coin address for each altcoin with the compressed private key")
-		fmt.Println("eg ./cost -usepk \"$(./cost -genpk)\"")
+		fmt.Println("eg ./cost -pk \"$(./cost -genpk)\"")
 		fmt.Println()
 		fmt.Println("Use -genseedwords to create 24 bip39 seed words. Use this as input for -seedwords")
 		fmt.Println("This will create bip44 Hierarchy with 20 receive addresses for bitcoin/litecoin and ether")

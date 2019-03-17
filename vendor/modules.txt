@@ -1,0 +1,26 @@
+# github.com/btcsuite/btcd v0.0.0-20190315201642-aa6e0f35703c
+github.com/btcsuite/btcd/btcec
+github.com/btcsuite/btcd/chaincfg
+github.com/btcsuite/btcd/chaincfg/chainhash
+github.com/btcsuite/btcd/wire
+# github.com/btcsuite/btcutil v0.0.0-20190316010144-3ac1210f4b38
+github.com/btcsuite/btcutil
+github.com/btcsuite/btcutil/hdkeychain
+github.com/btcsuite/btcutil/base58
+github.com/btcsuite/btcutil/bech32
+# github.com/diegosz/go-bip39 v0.3.5
+github.com/diegosz/go-bip39
+# github.com/ethereum/go-ethereum v1.8.23
+github.com/ethereum/go-ethereum/crypto
+github.com/ethereum/go-ethereum/common
+github.com/ethereum/go-ethereum/common/math
+github.com/ethereum/go-ethereum/crypto/secp256k1
+github.com/ethereum/go-ethereum/rlp
+github.com/ethereum/go-ethereum/common/hexutil
+# golang.org/x/crypto v0.0.0-20190313024323-a1f597ede03a
+golang.org/x/crypto/ripemd160
+golang.org/x/crypto/pbkdf2
+golang.org/x/crypto/sha3
+# golang.org/x/sys v0.0.0-20190316082340-a2f829d7f35f
+golang.org/x/sys/cpu
+golang.org/x/sys/unix

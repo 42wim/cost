@@ -4,19 +4,22 @@ import (
 	"encoding/hex"
 	"flag"
 	"fmt"
+	"log"
+	"os"
+	"text/tabwriter"
+
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcutil"
 	"github.com/btcsuite/btcutil/hdkeychain"
-	"github.com/diegosz/go-bip39"
 	"github.com/ethereum/go-ethereum/crypto"
-	"log"
-	"os"
-	"text/tabwriter"
+	"github.com/tyler-smith/go-bip39"
 )
 
-var tw *tabwriter.Writer
-var pkstr, seedwords string
+var (
+	tw               *tabwriter.Writer
+	pkstr, seedwords string
+)
 
 func genCoin(pk *btcec.PrivateKey, PubKeyHashAddrID, PrivateKeyID byte, name string) {
 	net := &chaincfg.MainNetParams
@@ -138,9 +141,11 @@ func bip44(name string, count int, pkb []byte) Account {
 
 			// add the address to our addresses, with the pub and privkey as a string (compressed)
 			account.Addresses = append(account.Addresses,
-				Address{address.String(),
+				Address{
+					address.String(),
 					"0x" + hex.EncodeToString(pubk.SerializeCompressed()),
-					"0x" + hex.EncodeToString(privk.Serialize())})
+					"0x" + hex.EncodeToString(privk.Serialize()),
+				})
 		} else {
 			// Address converts the extended key to a standard bitcoin pay-to-pubkey-hash
 			// address for the passed network.
@@ -234,7 +239,7 @@ func main() {
 		// https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki
 		// to create binary seed from the mnemonic, we use the PBKDF2 function with a mnemonic sentence (in UTF-8 NFKD)
 		// used as the password and the string "mnemonic" + passphrase (again in UTF-8 NFKD) used as the salt. i
-		//The iteration count is set to 2048 and HMAC-SHA512 is used as the pseudo-random function.
+		// The iteration count is set to 2048 and HMAC-SHA512 is used as the pseudo-random function.
 		// The length of the derived key is 512 bits (= 64 bytes).
 		// don't use an extra password for the seed
 		wallet.Seed, err = bip39.NewSeedWithErrorChecking(seedwords, "")

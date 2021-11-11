@@ -8,9 +8,9 @@ can create bip44 receive addresses based on bip39 mnemonic seed words
 Do not use in production :)
 
 ## Building
-Go 1.12+ is required.
+Go 1.17+ is required.
 
-go get -tags nocgo github.com/42wim/cost
+go install github.com/42wim/cost
 ```
 
 You should now have cost binary in the ~/go/bin directory:

@@ -1,0 +1,6 @@
+# Editors
+.vscode/
+.idea/
+
+# Dev artifacts
+coverage.out

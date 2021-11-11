@@ -1,13 +1,15 @@
 module github.com/42wim/cost
 
-go 1.12
+go 1.17
 
 require (
-	github.com/btcsuite/btcd v0.0.0-20190315201642-aa6e0f35703c
-	github.com/btcsuite/btcutil v0.0.0-20190316010144-3ac1210f4b38
-	github.com/diegosz/go-bip39 v0.3.5
-	github.com/ethereum/go-ethereum v1.8.23
-	github.com/stretchr/testify v1.3.0 // indirect
-	golang.org/x/crypto v0.0.0-20190313024323-a1f597ede03a // indirect
-	golang.org/x/sys v0.0.0-20190316082340-a2f829d7f35f // indirect
+	github.com/btcsuite/btcd v0.20.1-beta
+	github.com/btcsuite/btcutil v1.0.2
+	github.com/ethereum/go-ethereum v1.10.12
+	github.com/tyler-smith/go-bip39 v1.1.1-0.20201031083441-3423700f9707
+)
+
+require (
+	golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2 // indirect
+	golang.org/x/sys v0.0.0-20210816183151-1e6c022a8912 // indirect
 )
